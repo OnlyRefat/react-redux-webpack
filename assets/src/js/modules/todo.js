@@ -50,6 +50,8 @@ export default function reducer(state = initialList , action) {
 				...state,
 				allItem: [...edititems.slice(0, editindex).concat([doEditedItem]), ...edititems.slice(editindex+1)],
 			}
+		case 'FetchEmail':
+			console.log(action.emails);
 		default: 
 			return state;
 	}
